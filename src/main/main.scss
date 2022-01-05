@@ -1,0 +1,31 @@
+header {
+    background-color: #202020;
+    border-bottom: 1px solid #ccc;
+    div {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            display: block;
+            margin: 25px auto 0 auto;
+            width: 140px;
+            height: 25px;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            color: #ccc;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            li {
+                padding: 0 20px;
+                transition: 0.5s;
+            }
+            :hover {
+                color: #fff;
+            }
+        }
+    }
+}
