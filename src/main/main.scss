@@ -1,23 +1,23 @@
 header {
     background-color: #202020;
-    border-bottom: 1px solid #ccc;
-    div {
-        height: 80px;
+    // border-bottom: 1px solid #ccc;
+    .headerDiv {
         display: flex;
         align-items: center;
         justify-content: center;
-        a {
+        #logo {
             display: block;
             margin: 25px auto 0 auto;
             width: 140px;
-            height: 25px;
+            height: 30px;
         }
         ul {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             color: #ccc;
-            width: 100%;
-            font-size: 18px;
+            width: 80%;
+            height: 43px;
             font-weight: bold;
             li {
                 padding: 0 20px;
@@ -25,6 +25,335 @@ header {
             }
             :hover {
                 color: #fff;
+            }
+        }
+    }
+    #hideMenu {
+        height: 420px;
+        margin: 0 auto;
+        z-index: 2;
+        width: 1200px;
+        display: none;
+        .hideMenu_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .title {
+                color: #fff;
+                margin-bottom: 16px;
+                height: 58px;
+                line-height: 50px;
+                font-size: 20px;
+            }
+            .hideMenu_group {
+                color: #ccc;
+                line-height: 30px;
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                .group_kitchen, .wrap, .group_audio, .group_cleaner{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+                .group_recipe {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+        }
+    }
+}
+#visual {
+    img {
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+    #visual_text {
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        a {
+            padding: 12px 60px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            border-radius: 200px;
+            font-size: 22px;
+        }
+    }
+    #indi ul {
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        display: flex;
+        li {
+            width: 13px;
+            height: 13px;
+            background-color: #ccc;;
+            border-radius: 50%;
+            margin: 0 10px;
+            font-size: 0;
+            cursor: pointer;
+            }
+    }
+}
+#product {
+    height: 100%;
+    p {
+        padding: 80px 0 10px 50px;
+        font-size: 35px;
+    }
+    #productTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 32%;
+        padding-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        li {
+            transition: 0.5s;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+    #product-list {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .product-card {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+            width: 31%;
+            overflow: hidden;
+            &:not(:last-child) {
+                border-right: 1px solid #ddd;
+            }
+            .product-img {
+                width: 100%;
+            }
+            .product-contents {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                span:nth-child(1){
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                #detailGo {
+                    color: #333;
+                    font-weight: bold;
+                    margin: 30px auto 0 auto;
+                    padding: 5px 5px 5px 10px;
+                    border-radius: 200px;
+                    border: 1px solid #333;
+                    font-size: 14px;
+                    width: 140px;
+                    transition: 0.5s;
+                    #icons {
+                        padding-top: 3px;
+                    }
+                    &:hover {
+                        background-color: #333;
+                        color: #fff;
+                        border: none;
+                    }
+                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+#container {
+    width: 100%;
+    background: #ddd;
+    #recipe {
+        background-color: #ddd;
+        height: 100%;
+        margin-top: 30px;
+        #recipe-list {
+            margin-top: 30px;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .recipe-card {
+                margin-bottom: 50px;
+                position: relative;
+                width: 32%;
+                overflow: hidden;
+                padding: 20px;
+                #title {
+                    margin-top: 60px;
+                    li {
+                        padding-top: 10px;
+                        padding-bottom: 15px;
+                        &:nth-child(1) {
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: #5d5d5d;
+                        }
+                        &:nth-child(2) {
+                            font-size: 35px;
+                        }
+                        &:nth-child(3) {
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: #5d5d5d;
+                        }
+                    }
+                }
+                #recipeGo {
+                    position: absolute;
+                    padding: 5px 15px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    top: 65%;
+                    box-shadow: 10px 10px 16px 0 rgb(0 0 0 / 30%);
+                    transition: 0.5s;
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+                .recipe-img {
+                    width: 100%;
+                }
+                .recipe-contents {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    span:nth-child(1){
+                        font-size: 22px;
+                        font-weight: bold;
+                        padding-bottom: 10px;
+                    }
+                    #dec {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+#notice {
+    background-color: #e59703;
+    color: #fff;
+    padding: 26px 0;
+    text-align: left;
+    div {
+        margin: 0 auto;
+        max-width: 1040px;
+        #title {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #icons {
+            padding-top: 3px;
+        }
+    }
+}
+footer {
+    background-color: #333;
+    color: #999;
+    padding-top: 60px;
+    #info {
+        border-top: 3px solid #333;
+        padding-bottom: 20px;
+        div {
+            >ul {
+                display: flex;
+                justify-content: space-between;
+                >li {
+                    width: 22%;
+                    h3 {
+                        padding-top: 20px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #ccc;
+                        margin-bottom: 20px;
+                    }
+                    li {
+                        // border-bottom: 1px solid #ddd;
+                        line-height: 36px;
+                    }
+                    h4 {
+                        width: 50%;
+                        padding-top: 80px;
+                        padding-bottom: 15px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                #snsMenu {
+                    display: flex;
+                    li {
+                        margin-right: 18px;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    #fmenu {
+        margin-top: 50px;
+        font-size: 12px;
+        background-color: #404040;
+        height: 50px;
+        border-top: 1px solid #5d5d5d;
+        border-bottom: 1px solid #5d5d5d;
+        ul {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            li {
+                padding: 0 20px;
+                &:not(:last-child) {
+                    border-right: 1px solid #5d5d5d;
+                }
+            }
+        }
+    }
+    #fcopy {
+        position: relative;
+        padding: 20px 0;
+        background-color: #404040;
+        font-size: 12px;
+        .innerCon {
+            display: flex;
+            justify-content: space-between;
+            #footerLogo {
+                padding-top: 15px;
+                padding-right: 10px;
+                text-align: right;
+                img {
+                    width: 50%;
+                    padding-bottom: 5px;
+                }
             }
         }
     }
