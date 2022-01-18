@@ -4,7 +4,9 @@ import Header from './include/Header';
 import Footer from './include/Footer';
 import { Route, Routes } from 'react-router-dom';
 import ProductView from './ProductView';
-import ReviewPage from './review';
+// import ProductReview from './ProductReview';
+import Store from './Store';
+import Recipe from './Recipe';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/:id" element={<ProductView />} />
-        <Route path="/review" element={<ReviewPage />} />
+        {/* <Route path="/products/:id/reviews" elemet={<ProductReview />} /> */}
+        <Route path="/recipes" element={<Recipe />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
       {/* <MainPage /> */}
       <Footer />

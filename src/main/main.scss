@@ -17,11 +17,15 @@ header {
             align-items: center;
             color: #ccc;
             width: 80%;
-            height: 43px;
+            height: 45px;
             font-weight: bold;
             li {
                 padding: 0 20px;
                 transition: 0.5s;
+                font-size: 16px;
+                span {
+                    padding: 0 2px;
+                }
             }
             :hover {
                 color: #fff;
@@ -29,11 +33,11 @@ header {
         }
     }
     #hideMenu {
-        height: 420px;
+        height: 500px;
         margin: 0 auto;
-        z-index: 2;
+        z-index: 1;
         width: 1200px;
-        display: none;
+        // display: none;
         .hideMenu_wrap {
             display: flex;
             justify-content: space-between;
@@ -60,12 +64,32 @@ header {
                     display: flex;
                     flex-direction: column;
                 }
+                .group_name {
+                    font-size: 16px;
+                }
+                span {
+                    font-size: 12px;
+                }
             }
             
         }
     }
 }
 #visual {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #333;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+    }
+    .swiper-pagination-bullet-active {
+        background: #333;
+        width: 12px;
+        height: 12px;
+    }
     img {
         width: 100%;
         height: 80%;
@@ -74,20 +98,23 @@ header {
     #visual_text {
         position: absolute;
         text-align: center;
-        top: 30%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
         img {
             display: block;
-            width: 100%;
             margin-bottom: 50px;
         }
-        a {
+        span {
             padding: 12px 60px;
             background-color: rgba(0,0,0,0.7);
             color: #fff;
             border-radius: 200px;
             font-size: 22px;
+            transition: 0.5s;
+            &:hover {
+                padding: 12px 75px;
+            }
         }
     }
     #indi ul {
@@ -117,7 +144,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 32%;
+        width: 23%;
         padding-left: 50px;
         margin-top: 10px;
         margin-bottom: 30px;
@@ -234,6 +261,7 @@ header {
                     transition: 0.5s;
                     &:hover {
                         font-weight: bold;
+                        padding: 5px 20px;
                     }
                 }
                 .recipe-img {

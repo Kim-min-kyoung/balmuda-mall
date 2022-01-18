@@ -1,14 +1,18 @@
 import axios from 'axios';
 import './product.scss';
 import { API_URL } from '../config/constants';
-// import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import Review from '../ProductReview/ReviewList';
+// import { useDispatch, useSelector } from 'react-redux';
+// import styled, { css } from 'styled-components';
+// import { addCart } from '../store/actions';
 
-function ProductView({ onChange, onCreatelist, desc }) {
+function ProductView(props) {
+    // 상품정보, 리뷰페이지 탭메뉴로 변경하기 - 서브라우터
+
     const [ product, setProduct ] = useState(null);
-    const [ open, setOpen] = useState(false);
     const param = useParams();
     const { id } = param;
     useEffect(() => {
@@ -23,9 +27,6 @@ function ProductView({ onChange, onCreatelist, desc }) {
             console.log(error);
         })
     }, []);
-    function onToggle(){
-        setOpen(!open);
-    }
     if(product == null) {
         return <div>상품정보 받는 중 ing..</div>
     }
@@ -37,41 +38,25 @@ function ProductView({ onChange, onCreatelist, desc }) {
                 </div>
                 <div id="contents-box">
                     <div id="subname">{product.subname}</div>
+                    {/* 금액 000,000 으로 변환하기 */}
                     <div id="name">{product.name}</div>
                     <div id="price">{product.price}원</div>
                     <div id="desc">{product.description}</div>
                     <div className="btn">
-                        <span>ADD TO BAG</span>
-                        <span>BUY IT NOW</span>
+                        <button>ADD TO BAG</button>
+                        <button>BUY IT NOW</button>
                     </div>
                 </div>
             </div>
             <div id="detail">
-                <h2>상품정보</h2>
+                <ul>
+                    <li><Link to="/">상품정보</Link></li>
+                    <li><Link to="../ProductReview/ReviewList">상품리뷰</Link></li>
+                </ul>
                 <div>
+                    {/* <Route exact path="../ProductReview/ReviewList" component={Review} /> */}
+                    {/* 컴포넌트로 빼고 라우트로 관리하기 */}
                     <img src={product.product_description} alt="상품상세" />
-                </div>
-            </div>
-            <div id="review">
-                <div id="top">
-                    <h2>Review</h2>
-                    <div>
-                        {open &&
-                            <form>
-                                <div class="rating">
-                                <p>Rating</p>
-                                    <div>
-                                        <faStar/>
-                                        <faStar/>
-                                        <faStar/>
-                                        <faStar/>
-                                        <faStar/>
-                                    </div>
-                                </div>
-                            </form>
-                        }
-                    </div>
-                    <span id="reviewGo" onClick={onToggle} onpen={open}>작성하기</span>
                 </div>
             </div>
         </div>

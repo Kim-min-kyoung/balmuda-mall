@@ -1,19 +1,21 @@
+import { BsCart4 } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 function Header() {
     return (
         <header>
             <div className="innerCon headerDiv">
-                <a id="logo" href="/"><img src="img/logo.svgz" alt="로고"/></a>
+                <p id="logo"><Link to="/"><img src="img/logo.svgz" alt="로고"/></Link></p>
             </div>
             <div className="innerCon headerDiv">
                 <ul>
-                    <li>Home</li>
+                    <li><Link to="/">Home</Link></li>
                     <li>Products</li>
                     <li>About</li>
                     <li>Support</li>
-                    <li>Store</li>
+                    <li><Link to='./store'>Store<span /><BsCart4 id="icons" /></Link></li>
                 </ul>
             </div>
-            <div id="hideMenu">
+            {/* <div id="hideMenu">
             <div class="hideMenu_wrap">
                     <div class="hideMenu_group">
                         <div class="group_kitchen">
@@ -25,7 +27,7 @@ function Header() {
                         </div>
                         <div class="group_recipe">
                             <h4 class="title"><em>Recipe</em></h4>
-                            <a href="/recipe/"><span class="group_name">The Recipe<span>발뮤다 레시피</span></span></a>
+                            <a href="/recipe/"><span class="group_name">The Recipe<br/><span>발뮤다 레시피</span></span></a>
                         </div>
                     </div>
 					<div class="hideMenu_group">
@@ -50,15 +52,15 @@ function Header() {
                     <div class="hideMenu_group">
 							<div class="group_audio">
 								<h4 class="title"><em>Audio</em></h4>
-								<a href="/speaker/"><span>BALMUDA The speaker<br/><span>블루투스 스피커</span></span></a>
+								<a href="/speaker/"><span class="group_name">BALMUDA The speaker<br/><span>블루투스 스피커</span></span></a>
 							</div>
 							<div class="group_cleaner">
 								<h4 class="title"><em>Cleaner</em></h4>
-								<a href="/cleaner/"><span>BALMUDA The Cleaner<br/><span>무선 청소기</span></span></a>
+								<a href="/cleaner/"><span class="group_name">BALMUDA The Cleaner<br/><span>무선 청소기</span></span></a>
 							</div>
 					</div>
 				</div>
-            </div>
+            </div> */}
         </header>
     );
 }

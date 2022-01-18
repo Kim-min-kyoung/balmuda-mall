@@ -20,7 +20,7 @@ function Footer(){
                         <li>
                             <h3>Support</h3>
                             <ul>
-                                <li>0Customer Support</li>
+                                <li>Customer Support</li>
                                 <li>Contact info</li>
                                 <li>After Service</li>
                                 <li>Product Registration</li>

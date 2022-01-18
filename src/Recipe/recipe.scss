@@ -1,0 +1,74 @@
+#con {
+    width: 100%;
+    background-color: #f5f4f2;
+    margin: 0;
+    #con_inner {
+        background: url(../../public/img/recipes/recipe_bg.jpeg) 50% 0 no-repeat;
+        background-size: 100% auto;
+        height: 1600px;
+        #recipe_logo {
+            padding: 120px 15px 70px 15px;
+            height: 320px;
+            text-align: center;
+            img {
+                width: 228px;
+                height: 84.5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    #recipe {
+        padding: 0 20px;
+        margin-top: 80px;
+        #recipe-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .recipe-card {
+                margin: 0 16px 30px 16px;
+                position: relative;
+                width: 233px;
+                background: #fff;
+                overflow: hidden;
+                transition: 1s;
+                img {
+                    height: 233px;
+                }
+                .recipe-contents {
+                    width: 100%;
+                    height: 94px;
+                    text-align: center;
+                    p {
+                        padding-top: 32px;
+                        font-size: 15px;
+                    }
+                }
+                &:nth-child(1), &:nth-child(7){
+                    ::after {
+                        content: 'NEW';
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                        width: 100px;
+                        height: 18px;
+                        padding: 5px 0;
+                        left: -28px;
+                        top: 10px;
+                        color: #fff;
+                        background-color: #ff3333;
+                        font-size: 11px;
+                        line-height: 15px;
+                        letter-spacing: .15em;
+                        text-align: center;
+                        position: absolute;
+                    }
+                }
+                &:hover {
+                    box-shadow: 8px 8px 8px 8px rgb(0 0 0 / 20%);
+                }
+            }
+        }
+    }
+}

@@ -30,10 +30,11 @@
         }
         .btn {
             margin-top: 50px;
-            span {
+            button {
                 padding: 10px 20px;
                 background-color: #333;
                 color: #fff;
+                border: none;
                 &:first-child {
                     margin-right: 20px;
                 }
@@ -44,14 +45,24 @@
 #detail {
     text-align: center;
     margin-top: 20px;
-    h2 {
+    ul {
         font-size: 16px;
         text-align: left;
         padding: 20px;
         border-bottom: 1px solid #d4d4d4;
+        display: flex;
+    }
+    li {
+        padding: 0 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            font-weight: bold;
+        }
     }
     div {
         margin-top: 30px;
+        margin-bottom: 60px;
     }
 }
 #review {

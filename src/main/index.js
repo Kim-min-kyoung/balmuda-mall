@@ -1,13 +1,23 @@
 import './main.scss';
 import axios from 'axios';
 import { API_URL } from '../config/constants';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillNotification } from 'react-icons/ai';
 import { GoChevronRight } from 'react-icons/go';
+// 배너이미지
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+SwiperCore.use([Navigation, Pagination, Autoplay]);
+
+// 탭메뉴
 
 function MainPage() {
     const [ products, setProducts ] = useState([]);
+    // const [ banners, setBanners ] = useState([]);
     useEffect(() => {
         axios.get(`${API_URL}/products`)
         .then(function(result){
@@ -22,25 +32,44 @@ function MainPage() {
     return (
         <div id="main">
             <div id="visual">
-                <img src="img/main01.jpg" alt="메인페이지 이미지01" />
-                <div id="visual_text">
-                    <img src="img/main01_text.svg" alt="메인페이지 이미지01 텍스트" />
-                    <a>제품정보</a>
+                <div>
+                    <Swiper
+                        className="banner"
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 3000 }}	// 추가
+                    >
+                        <SwiperSlide>
+                            <img src="img/banners/main_banner_01.jpeg" />
+                            <div id="visual_text">
+                                <img src="img/banners/main01_text.svg" alt="메인페이지 이미지01 텍스트" />
+                                <span>제품정보</span>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="img/banners/main_banner_02.jpeg" />
+                            <div id="visual_text">
+                                <img src="img/banners/main02_text2.svg" alt="메인페이지 이미지02 텍스트" />
+                                <span>제품정보</span>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="img/banners/main_banner_03.jpeg" />
+                            <div id="visual_text">
+                                <img src="img/banners/main03_text2.svg" alt="메인페이지 이미지03 텍스트" />
+                                <span>제품정보</span>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
-                {/* <div id="indi">
-                    <ul>
-                        <li/>
-                        <li/>
-                        <li/>
-                        <li/>
-                        <li/>
-                    </ul>
-                </div> */}
+                
             </div>
                 <div id="product" className="innerCon">
                     <p>Best <strong>Seller</strong></p>
                     <ul id="productTop">
-                        <li>CLEANSER</li>
+                        {/* <li>CLEANSER</li> */}
                         <li>KITCHEN</li>
                         <li>AIR</li>
                         <li>LIGHTING</li>
@@ -108,11 +137,11 @@ function MainPage() {
                                     </li>
                                     <li>SIGNATURE RECIPE</li>
                                 </ul>
-                                <span id="recipeGo">더 알아보기</span>
+                                <span id="recipeGo"><Link to="/recipes">더 알아보기</Link></span>
                             </div>
                             <div className="recipe-card">
                                 <div>
-                                    <img className="recipe-img" src="img/recipe/recipe01.jpeg" alt="레시피1" />
+                                    <img className="recipe-img" src="img/recipes/recipe01.jpeg" alt="레시피1" />
                                 </div>
                                 <div className="recipe-contents">
                                     <span>리치베리 모닝 에그번</span>
@@ -124,7 +153,7 @@ function MainPage() {
                             </div>
                             <div className="recipe-card">
                                 <div>
-                                    <img className="recipe-img" src="img/recipe/recipe02.jpeg" alt="레시피2" />
+                                    <img className="recipe-img" src="img/recipes/recipe02.jpeg" alt="레시피2" />
                                 </div>
                                 <div className="recipe-contents">
                                     <span>카레 리소토</span>
