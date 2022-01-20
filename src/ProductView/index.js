@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductView from './ProductView';
-import ReviewList from '../ProductReview/ReviewList';
+import ReviewList from '../ProductReview';
 // import ProductDetail from './ProductDetail';
 import { Route, Switch, Link, Routes } from 'react-router-dom';
 
@@ -14,9 +14,9 @@ function index(props) {
                     <li><Link to="../review">상품리뷰</Link></li>
                 </ul>
             </div>
-            <Routes>
+            {/* <Routes>
                 <Route path="/products/:id/review" element={<ReviewList />} />
-            </Routes>
+            </Routes> */}
         </div>
     );
 }

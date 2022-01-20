@@ -5,7 +5,7 @@ import {API_URL} from '../config/constants';
 import './about.scss';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
 
-function Recipe() {
+function About() {
     const [ abouts, setAbouts ] = useState([]);
     useEffect(() => {
         axios.get(`${API_URL}/abouts`)
@@ -27,7 +27,22 @@ function Recipe() {
                 </div>
                 <div id="about" className="innerCon">
                     <div id="about-list">
-                        <div className="about-card">
+                        {
+                            abouts.map(about => {
+                                return(
+                                    <div className="about-card" key={about.id}>
+                                        <div>
+                                            <img className="about-img" src={about.imageUrl} alt="스토리 이미지" />
+                                        </div>
+                                        <div class="about-contents">
+                                            <h3>{about.name}</h3>
+                                            <p>{about.desc}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                        {/* <div className="about-card">
                             <div>
                                 <img className="about-img" src="img/about/story1.jpg" alt="스토리1" />
                             </div>
@@ -80,7 +95,7 @@ function Recipe() {
                                 <h3>와다 사토시x테라오 겐 대담</h3>
                                 <p>일본에서 만든 제품: Made in Japan에 담은 생각</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -88,4 +103,4 @@ function Recipe() {
     );
 }
 
-export default Recipe;
+export default About;

@@ -28,11 +28,11 @@ function Recipe() {
                 <div id="recipe" className="innerCon">
                     <div id="recipe-list">
                         {
-                            recipes .map(recipe => {
+                            recipes.map(recipe => {
                                 return(
                                     <div className="recipe-card" key={recipe.id}>
                                         <div>
-                                            <img className="recipe-img" src={recipe.imageUrl} alt="레시피1" />
+                                            <img className="recipe-img" src={recipe.imageUrl} alt="레시피 이미지" />
                                         </div>
                                         <div className="recipe-contents">
                                             <p>{recipe.name}</p>

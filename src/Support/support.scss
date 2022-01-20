@@ -1,17 +1,25 @@
 #support {
-    h1 {
-        margin-top: 20px;
-        height: 120px;
-        font-size: 24px;
-        font-weight: 300;
-        text-align: center;
-        padding: 40px 0px 40px 0px;
-        color: #333;
-        span {
-            color: #aaa;
-            font-weight: 300;
-            &::after {
-                content: " | ";
+    #supportTop {
+        background: url(../../public/img/support_bg.jpeg);
+        background-size: cover;
+        height: 220px;
+        #topText {
+            padding: 50px;
+            text-align: center;
+            h1 {
+                font-size: 46px;
+                text-align: center;
+                padding: 40px 0px 40px 0px;
+                color: #333;
+                vertical-align: middle;
+                span {
+                    color: #aaa;
+                    font-weight: 300;
+                    font-size: 30px;
+                    &::after {
+                        content: " | ";
+                    }
+                }
             }
         }
     }
