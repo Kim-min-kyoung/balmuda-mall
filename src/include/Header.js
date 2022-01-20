@@ -10,8 +10,8 @@ function Header() {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li>Products</li>
-                    <li>About</li>
-                    <li>Support</li>
+                    <li><Link to="./about">About</Link></li>
+                    <li><Link to="./support">Support</Link></li>
                     <li><Link to='./store'>Store<span /><BsCart4 id="icons" /></Link></li>
                 </ul>
             </div>

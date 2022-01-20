@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
-
+import Review from './Review';
 
 function ReviewList(props) {
     return (
@@ -11,10 +11,10 @@ function ReviewList(props) {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>번호</TableCell>
-                            <TableCell></TableCell>
-                            <TableCell>이름</TableCell>
-                            <TableCell>작성일</TableCell>
+                            <TableCell align='center'>번호</TableCell>
+                            <TableCell align='center'>내용</TableCell>
+                            <TableCell align='center'>아이디</TableCell>
+                            <TableCell align='center'>작성일</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
