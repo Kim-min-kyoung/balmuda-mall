@@ -14,7 +14,7 @@ function index(props) {
             </div>
             <div id="main">
                 <div id="top">
-                    <table>
+                    <table id="storeTable">
                         <th id="check">전체선택</th>
                         <th>제품정보</th>
                         <th>수량</th>

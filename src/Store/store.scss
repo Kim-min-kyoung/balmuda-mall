@@ -24,11 +24,10 @@
             }
         }
     }
-    #main {
-        #top {
-            table {
-                width: 100%;
-            }
-        }
+}
+#storeTable {
+    width: 100%;
+    th#check {
+        width: 100px;
     }
 }

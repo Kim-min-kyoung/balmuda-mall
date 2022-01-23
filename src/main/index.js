@@ -69,7 +69,6 @@ function MainPage() {
                 <div id="product" className="innerCon">
                     <p>Best <strong>Seller</strong></p>
                     <ul id="productTop">
-                        {/* <li>CLEANSER</li> */}
                         <li>KITCHEN</li>
                         <li>AIR</li>
                         <li>LIGHTING</li>

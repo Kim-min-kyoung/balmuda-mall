@@ -1,9 +1,8 @@
 import axios from 'axios';
-import './product.scss';
+import './detailProduct.scss';
 import { API_URL } from '../config/constants';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import ReviewList from '../ProductReview/ReviewList';
 // import { useDispatch, useSelector } from 'react-redux';
 // import styled, { css } from 'styled-components';
@@ -49,10 +48,6 @@ function ProductView(props) {
                 </div>
             </div>
             <div id="detail">
-                <ul>
-                    <li><Link to="./detail">상품정보</Link></li>
-                    <li><Link to="./review">상품리뷰</Link></li>
-                </ul>
                 <div>
                     {/* 컴포넌트로 빼고 라우트로 관리하기  */}
                     <img src={product.product_description} alt="상품상세" />

@@ -22,7 +22,7 @@ function About() {
         <div id="about_con">
             <div id="con_inner">
                 <div id="aboutTop">
-                    <h1>Stories</h1>
+                    <h1>About</h1>
                     <p><RiDoubleQuotesL />발뮤다 제품을 만들기 위한 집념<RiDoubleQuotesR /></p>
                 </div>
                 <div id="about" className="innerCon">
@@ -34,7 +34,7 @@ function About() {
                                         <div>
                                             <img className="about-img" src={about.imageUrl} alt="스토리 이미지" />
                                         </div>
-                                        <div class="about-contents">
+                                        <div className="about-contents">
                                             <h3>{about.name}</h3>
                                             <p>{about.desc}</p>
                                         </div>

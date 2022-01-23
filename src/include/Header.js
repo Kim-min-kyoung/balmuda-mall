@@ -9,9 +9,9 @@ function Header() {
             <div className="innerCon headerDiv">
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li>Products</li>
+                    <li><Link to="./product">Products</Link></li>
                     <li><Link to="./about">About</Link></li>
-                    <li><Link to="./support">Support</Link></li>
+                    <li><Link to="./notice">Notice</Link></li>
                     <li><Link to='./store'>Store<span /><BsCart4 id="icons" /></Link></li>
                 </ul>
             </div>

@@ -7,8 +7,10 @@ import ProductView from './ProductView';
 import ReviewList from './ProductReview/ReviewList';
 import Store from './Store';
 import Recipe from './Recipe';
-import Support from './Support';
+import Notice from './Notice/index';
+// import NoticeView from './Notice/NoticeView';
 import About from './About';
+import Product from './Product'
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/products/:id" element={<ProductView />} />
+        <Route path="/products/:id/*" element={<ProductView />} />
         <Route path="/products/:id/review" element={<ReviewList />} />
         {/* <Route path="/products/:id/detail" element={<ProductDetail />} /> */}
-        <Route path="/support" element={<Support />} />
+        <Route path="/notice/*" element={<Notice />} />
+        <Route path="/product/*" element={<Product />} />
+        {/* <Route path="/notice/:id" element={<NoticeView />} /> */}
         <Route path="/recipes" element={<Recipe />} />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />

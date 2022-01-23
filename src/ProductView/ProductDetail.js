@@ -1,5 +1,5 @@
 import axios from 'axios';
-import './product.scss';
+import './detailProduct.scss';
 import { API_URL } from '../config/constants';
 import { Link, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
