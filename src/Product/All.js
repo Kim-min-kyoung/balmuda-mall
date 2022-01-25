@@ -5,8 +5,16 @@ import { API_URL } from '../config/constants';
 
 function All(props) {
     const [ products, setProducts ] = useState([]);
+    const [ group, setGroup ] = useState('product');
+    const AllClick = () => {
+        setGroup('product');
+    }
+    const liClick = (e) => {
+        console.log(e.target.innerHTML); 
+        setGroup(`products_group/${e.target.innerHTML}`);
+    }
     useEffect(() => {
-        axios.get(`${API_URL}/product`)
+        axios.get(`${API_URL}/${group}`)
         .then(function(result){
             const products = result.data.product;
             console.log(products);
@@ -15,9 +23,15 @@ function All(props) {
         .catch(function(error){
             console.log(error);
         })
-    }, [])
+    }, [group])
     return (
         <div className='innerCon'>
+            <ul className='nav'>
+                <li onClick={AllClick}>ALL</li>
+                <li onClick={liClick}>AIR</li>
+                <li onClick={liClick}>KITCHEN</li>
+                <li onClick={liClick}>LIGHTING</li>
+            </ul>
             <div id="products">
                 <div id="products-list">
                         {
@@ -30,7 +44,7 @@ function All(props) {
                                             </div>
                                             <div className="products-contents">
                                                 <p>{product.name}</p>
-                                                <p>{product.price}원</p>
+                                                <p>{product.price.toLocaleString()}원</p>
                                             </div>
                                         </Link>
                                     </div>

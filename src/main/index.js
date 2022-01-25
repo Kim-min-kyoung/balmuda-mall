@@ -17,7 +17,11 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function MainPage() {
     const [ products, setProducts ] = useState([]);
-    // const [ banners, setBanners ] = useState([]);
+    const [ group, setGroup ] = useState('product');
+    const liClick = (e) => {
+        console.log(e.target.innerHTML); 
+        setGroup(`products_best/${e.target.innerHTML}`);
+    }
     useEffect(() => {
         axios.get(`${API_URL}/products`)
         .then(function(result){
@@ -28,7 +32,7 @@ function MainPage() {
         .catch(function(error){
             console.log(error);
         })
-    }, [])
+    }, [group])
     return (
         <div id="main">
             <div id="visual">
@@ -64,15 +68,14 @@ function MainPage() {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                
             </div>
                 <div id="product" className="innerCon">
                     <p>Best <strong>Seller</strong></p>
-                    <ul id="productTop">
-                        <li>KITCHEN</li>
-                        <li>AIR</li>
-                        <li>LIGHTING</li>
-                    </ul>
+                    {/* <ul id="productTop">
+                        <li onClick={liClick}>KITCHEN</li>
+                        <li onClick={liClick}>AIR</li>
+                        <li onClick={liClick}>LIGHTING</li>
+                    </ul> */}
                     <div id="product-list">
                         {
                             products.map(product => {

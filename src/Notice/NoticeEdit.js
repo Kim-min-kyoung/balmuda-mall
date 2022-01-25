@@ -7,8 +7,12 @@ import axios from 'axios';
 import useAsync from '../hooks/useAsync';
 
 function NoticeEdit() {
-    // 조회
     const [ notice, setNotice ] = useState(null);
+    const [ formData, setFormData ] = useState({
+        name: "",
+        title: "",
+        desc: ""
+    })
     const param = useParams();
     const { id } = param;
     const navigate = useNavigate();
@@ -24,30 +28,28 @@ function NoticeEdit() {
             console.log(error);
         })
     }, []);
-
-    // const param = useParams();
-    // const navigate = useNavigate();
-    // const { id } = param;
-    // const [ formData, setFormData ] = useState({
-    //     name: "",
-    //     title: "",
-    //     desc: ""
-    // })
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]:value
+        })
+        console.log(name, value);
+    }
     // 폼 submit 이벤트
     const onSubmit = (e) => {
         e.preventDefault();
-        updateNotice(e.target);
-        // setFormData({
-        //     name: "",
-        //     title: "",
-        //     desc: ""
-        // })
-        navigate(-1);
+        updateNotice();
+        setFormData({
+            name: "",
+            title: "",
+            desc: ""
+        })
     }
     // post전송 axios
     function updateNotice(){
         axios.post(
-            `http://localhost:8080/notice/${id}/edit/${id}`
+            `${API_URL}/notice/${id}/edit`, formData
             )
         .then(function(res){
             console.log(res);
@@ -57,22 +59,6 @@ function NoticeEdit() {
             console.log(err);
         })
     }
-    // // 저장
-    // const onSubmit = () => {
-    //     axios.delete(
-    //         `${API_URL}/notice/${id}`
-    //     )
-    //     .then(function(result){
-    //         console.log("삭제되었습니다.");
-    //         navigate(-1);
-    //     })
-    //     .catch(function(error){
-    //         console.log(error);
-    //     })
-    // }
-    // if(notice == null) {
-    //     return <div>공지게시판 받아오는 중 ing..</div>
-    // }
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -80,7 +66,7 @@ function NoticeEdit() {
                     <TableBody>
                         <TableRow>
                             <TableCell className="tdTitle">제목</TableCell>
-                            <TableCell><input name="title" type="text" defaultValue={notice[0].title} /></TableCell>
+                            <TableCell><input name="title" type="text" value={formData.title} onChange={onChange}/></TableCell>
                         </TableRow>
                         {/* <TableRow>
                             <TableCell className="tdTitle">날짜</TableCell>
@@ -88,11 +74,11 @@ function NoticeEdit() {
                         </TableRow> */}
                         <TableRow>
                             <TableCell className="tdTitle">작성자</TableCell>
-                            <TableCell><input name="name" type="text"defaultValue={notice[0].name}  /></TableCell>
+                            <TableCell><input name="name" type="text" value={formData.name} onChange={onChange}/></TableCell>
                         </TableRow>
                         <TableRow id="noticeDesc">
                             <TableCell className="tdTitle">내용</TableCell>
-                            <TableCell><input name="desc" id="desc" type="text" defaultValue={notice[0].desc}  /></TableCell>
+                            <TableCell><input name="desc" id="desc" type="text" value={formData.desc} onChange={onChange}/></TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

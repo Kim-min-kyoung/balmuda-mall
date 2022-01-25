@@ -110,7 +110,7 @@ function ProductCreate(props) {
                 </Table>
                 <div id="productBtn" className="innerCon">
                     <button type="submit">등록</button>
-                    <button onClick={(e) => (e.preventDefault())}><Link to="/notice">취소</Link></button>
+                    <button onClick={(e) => (e.preventDefault())}><Link to="/product">취소</Link></button>
                 </div>
             </form>
         </div>

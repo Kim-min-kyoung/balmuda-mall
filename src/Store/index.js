@@ -2,7 +2,7 @@ import React from 'react';
 import './store.scss';
 import { BsCartCheck, BsCreditCard, BsCheck2Square } from 'react-icons/bs';
 
-function index(props) {
+function index() {
     return (
         <div className="innerCon" id="store">
             <div id="header">

@@ -41,34 +41,29 @@ function NoticeView() {
     }
     return (
         <div>
-            {/* <div id="supportTop">
-                <div id="topText">
-                    <h1>Notice</h1>
-                </div>
-            </div> */}
             <Table className='innerCon' id="noitceTable2">
                 <TableBody>
                     <TableRow>
-                        <TableCell class="tdTitle">제목</TableCell>
+                        <TableCell className="tdTitle">제목</TableCell>
                         <TableCell>{notice.title}</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell class="tdTitle">날짜</TableCell>
+                        <TableCell className="tdTitle">날짜</TableCell>
                         <TableCell>{notice.createdAt}</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell class="tdTitle">작성자</TableCell>
+                        <TableCell className="tdTitle">작성자</TableCell>
                         <TableCell>{notice.name}</TableCell>
                     </TableRow>
                     <TableRow id="noticeDesc">
-                        <TableCell class="tdTitle">내용</TableCell>
+                        <TableCell className="tdTitle">내용</TableCell>
                         <TableCell>{notice.desc}</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
             <div id="noticeBtn" className="innerCon">
                 <button onClick={onDelete}>삭제</button>
-                <Link to={`/notice/${id}/edit/${id}`}><button>수정</button></Link>
+                <Link to={`/notice/${id}/edit`}><button>수정</button></Link>
                 <button onClick={(e) => (e.preventDefault())}><Link to="/notice">리스트</Link></button>
             </div>
         </div>

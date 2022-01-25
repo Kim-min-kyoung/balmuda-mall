@@ -1,0 +1,29 @@
+#support {
+    #supportTop {
+        background: url(../../public/img/support_bg.jpeg);
+        background-size: cover;
+        height: 220px;
+        #topText {
+            padding: 50px;
+            text-align: center;
+            h1 {
+                font-size: 46px;
+                text-align: center;
+                padding: 40px 0px 40px 0px;
+                color: #333;
+                vertical-align: middle;
+                span {
+                    color: #aaa;
+                    font-weight: 300;
+                    font-size: 30px;
+                    &::after {
+                        content: " | ";
+                    }
+                }
+            }
+        }
+    }
+    table {
+        padding: 20px;
+    }
+}

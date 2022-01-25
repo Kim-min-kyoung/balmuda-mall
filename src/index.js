@@ -5,16 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
-// import { Provider } from 'react-redux';
-// import { composeWithDevTools } from 'redux-devtools-extension';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './Store/reducers';
 
-// const store = createStore(rootReducer, composeWithDevTools());
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    
+      <BrowserRouter>
+      <Provider store={store}>
+        <App />
+        </Provider>
+      </BrowserRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

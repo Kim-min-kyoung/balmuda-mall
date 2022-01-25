@@ -24,9 +24,9 @@
     #products-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        // justify-content: space-between;
         .products-card {
-            margin: 0 10px 30px 10px;
+            margin: 0 20px 30px 20px;
             position: relative;
             width: 233px;
             background: #fff;
@@ -58,6 +58,9 @@
         margin: 0 10px;
         &:nth-child(1) {
             margin-left: 30px;
+        }
+        &:hover {
+            font-weight: bold;
         }
     }
 }

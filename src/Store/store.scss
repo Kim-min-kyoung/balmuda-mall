@@ -26,8 +26,16 @@
     }
 }
 #storeTable {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
     width: 100%;
     th#check {
         width: 100px;
+    }
+    li {
+        img {
+            width: 100px;
+        }
     }
 }

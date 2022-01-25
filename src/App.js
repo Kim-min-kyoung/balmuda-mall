@@ -5,12 +5,13 @@ import Footer from './include/Footer';
 import { Route, Routes } from 'react-router-dom';
 import ProductView from './ProductView';
 import ReviewList from './ProductReview/ReviewList';
-import Store from './Store';
+import Store from './ProductView/ProductList';
 import Recipe from './Recipe';
 import Notice from './Notice/index';
 // import NoticeView from './Notice/NoticeView';
 import About from './About';
 import Product from './Product'
+import Join from './Login/Join';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/recipes" element={<Recipe />} />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />
+        <Route path="/join" element={<Join />} />
       </Routes>
       {/* <MainPage /> */}
       <Footer />

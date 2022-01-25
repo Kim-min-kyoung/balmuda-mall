@@ -15,7 +15,7 @@ function index(props) {
                 <Route path="/" element={<Noticelist />} />
                 <Route path=":id" element={<NoticeView />} />
                 <Route path="/create" element={<NoticeCreate />} />
-                <Route path=":id/edit/:id" element={<NoticeEdit />} />
+                <Route path=":id/edit" element={<NoticeEdit />} />
             </Routes>
         </div>
     );

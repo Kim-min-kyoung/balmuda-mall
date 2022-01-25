@@ -1,0 +1,113 @@
+#detail_main {
+    display: flex;
+    justify-content: space-between;
+    #contents-box {
+        width: 50%;
+        padding-left: 40px;
+        margin-top: 90px;
+        div {
+            line-height: 1.5;
+        }
+        #subname {
+            padding-bottom: 5px;
+        }
+        #name {
+            font-size: 28px;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        #price {
+            font-size: 22px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+            width: 85%;
+        }
+        #desc {
+            margin-top: 20px;
+            width: 80%;
+            line-height: 2;
+            color: #aaa;
+        }
+        .btn {
+            margin-top: 50px;
+            button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                &:first-child {
+                    margin-right: 20px;
+                }
+                .add-cart-btn {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+#detail {
+    text-align: center;
+    margin-top: 20px;
+    ul {
+        font-size: 16px;
+        text-align: left;
+        padding: 20px;
+        border-bottom: 1px solid #d4d4d4;
+        display: flex;
+    }
+    li {
+        padding: 0 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+    div {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+}
+#review {
+    padding-top: 120px;
+    height: 400px;
+    #top {
+        position: relative;
+        h2 {
+            margin-top: 40px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            border-bottom: 3px solid #333;
+        }
+        span {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 5px 15px;
+            background-color: #333;
+            color: #fff;
+        }
+    }
+    .rating {
+        &svg {
+            color: #c7c7c7;
+            cursor: pointer;
+        }
+        &div {
+            width: 120px;
+        }
+        &div:hover svg {
+            color: rgb(212, 180, 0);
+        }
+        &svg:hover~svg {
+            color: #c7c7c7;
+        }
+    }
+}
+#image-box {
+    width: 50%;
+    text-align: center;
+    img {
+        width: 100%;
+    }
+}

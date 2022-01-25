@@ -5,27 +5,7 @@ import axios from 'axios';
 import { API_URL } from '../config/constants';
 import { Link } from 'react-router-dom';
 
-// 비동기 전송으로 get요청을 해주는 함수
-// 응답받은 데이터를 return해줌
-// async function getNotices() {
-//     const response = await axios.get(
-//         'http://localhost:8080/notices'
-//     )
-//     return response.data;
-// }
-
 function Noticelist() {
-    // const state = useAsync(getNotices);
-    // const { loading, error, data: notices } = state;
-    // console.log(notices);
-    // // 로딩중이라면?
-    // if(loading) return <div>로딩중...</div>
-    // // 에러가 발생했다면?
-    // if(error) return <div>페이지를 나타낼 수 없습니다.</div>
-    // // 데이터가 없다면?
-    // if(!notices) return null;
-    // // 정상적으로 작동이 된다면?
-
     const [ notices, setNotices ] = useState([]);
     useEffect(() => {
         axios.get(`${API_URL}/notice`)
