@@ -1,6 +1,6 @@
 #store  {
     #header ul {
-        margin: 50px auto 20px auto;
+        margin: 80px auto 20px auto;
         width: 400px;
         display: flex;
         justify-content: space-between;
@@ -24,18 +24,111 @@
             }
         }
     }
+    #footer_price {
+        margin-bottom: 30px;
+        p {
+            padding: 5px 20px 5px 0;
+            text-align: right;
+        }
+        #total_price {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    #footer_btn {
+        text-align: right;
+        margin-bottom: 50px;
+        span {
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.3s;
+            &:nth-child(1) {
+                background-color: #333;
+                color: #fff;
+                margin-right: 10px;
+            }
+            &:nth-child(2)
+            {  
+                background-color: #eee;
+                &:hover {
+                background-color: #ddd;
+                }
+            }
+        }
+    }
 }
 #storeTable {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
     width: 100%;
-    th#check {
-        width: 100px;
+    margin: 80px 0;
+    th {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #ccc;
+        color: #333;
     }
-    li {
-        img {
-            width: 100px;
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    #check {
+        width: 5%;
+    }
+    #img_cell {
+        width: 25%;
+    }
+    #name_cell {
+        width: 30%;
+    }
+    #count_cell {
+        width: 20%;
+        font-weight: bold;
+        button {
+            width: 25px;
+            height: 25px;
+            border: none;
+            background-color: #ccc;
+            color: #333;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.5s;
+            &:hover {
+                background-color: #333;
+                color: #fff;
+            }
         }
+        input {
+            border: none;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    #price_cell {
+        width: 15%;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #delte_cell {
+        width: 10%;
+        #icon {
+            font-size: 24px;
+        }
+    }
+    tr, td {
+        text-align: center;
+        font-size: 16px;
+        color: #5d5d5d;
+    }
+}
+.cart-empty {
+    margin: 80px 0;
+    text-align: center;
+    #icon {
+        font-size: 80px;
+        color: #5d5d5d;
+        margin: 20px 0;
     }
 }

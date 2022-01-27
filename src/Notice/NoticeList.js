@@ -52,9 +52,9 @@ function Noticelist() {
             <div className="innerCon" id="noticeWrite">
                 <Link to="/notice/create"><span>글쓰기</span></Link>
             </div>
-            <div className="notice_pagenav">
+            {/* <div className="notice_pagenav">
                 <a className="thispage">1</a> · <a href="v2_list.php?id=noticebd&amp;page=2" className="navi">2</a> · <a href="v2_list.php?id=noticebd&amp;page=3" className="navi">3</a> · <a href="v2_list.php?id=noticebd&amp;page=4" className="navi">4</a> 
-            </div>
+            </div> */}
         </div>
     );
 }

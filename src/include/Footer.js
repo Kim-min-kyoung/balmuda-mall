@@ -35,8 +35,7 @@ function Footer(){
                                 <li>About BALMUDAT</li>
                                 <li>History</li>
                                 <li>Awards</li>
-                                <li>Online Store</li>
-                                <li>Offline Store</li>
+                                <li>Gallery</li>
                             </ul>  
                         </li>
                         <li>
@@ -47,11 +46,10 @@ function Footer(){
                             </ul>
                             <h3>SNS</h3>
                             <ul id="snsMenu">
-                                <li><SiFacebook /></li>
-                                <li><SiNaver /></li>
-                                <li><SiTwitter /></li>
-                                <li><SiYoutube /></li>
-                                <li><SiInstagram /></li>
+                                <li><a href='https://www.facebook.com/balmudakorea'><SiFacebook /></a></li>
+                                <li><a href='https://blog.naver.com/NBlogTop.naver?isHttpsRedirect=true&blogId=balmuda'><SiNaver /></a></li>
+                                <li><a href='https://www.youtube.com/user/balmudakorea'><SiYoutube /></a></li>
+                                <li><a href='https://www.instagram.com/balmuda_korea/'><SiInstagram /></a></li>
                             </ul>
                         </li>
                     </ul>

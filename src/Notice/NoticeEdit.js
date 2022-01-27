@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './notice.scss';
 import { API_URL } from '../config/constants';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { Tab, Table, TableBody, TableCell, TableRow } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
-import useAsync from '../hooks/useAsync';
 
 function NoticeEdit() {
     const [ notice, setNotice ] = useState(null);
@@ -49,7 +48,7 @@ function NoticeEdit() {
     // post전송 axios
     function updateNotice(){
         axios.post(
-            `${API_URL}/notice/${id}/edit`, formData
+            `${API_URL}/notice_edit/${id}`, formData
             )
         .then(function(res){
             console.log(res);
@@ -70,7 +69,7 @@ function NoticeEdit() {
                         </TableRow>
                         {/* <TableRow>
                             <TableCell className="tdTitle">날짜</TableCell>
-                            <TableCell><input name="createAt" type="text" value={formData.createdAt} onChange={onChange} /></TableCell>
+                            <TableCell><input name="date" type="date" value={formData.date} onChange={onChange} /></TableCell>
                         </TableRow> */}
                         <TableRow>
                             <TableCell className="tdTitle">작성자</TableCell>

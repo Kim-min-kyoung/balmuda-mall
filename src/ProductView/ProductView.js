@@ -3,10 +3,8 @@ import './detailProduct.scss';
 import { API_URL } from '../config/constants';
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-// import ReviewList from '../ProductReview/ReviewList';
 import { useDispatch } from "react-redux";
 import { addCart } from '../Store/action'
-// import styled, { css } from 'styled-components';
 
 function ProductView() {
     // 장바구니
@@ -15,6 +13,11 @@ function ProductView() {
     const [ product, setProduct ] = useState(null);
     const param = useParams();
     const { id } = param;
+    const addCartProduct = () => {
+        console.log(product);
+        dispatch(addCart(product));
+        alert("장바구니에 추가되었습니다.");
+    }
     useEffect(() => {
         axios.get(
             `${API_URL}/products/${id}`
@@ -41,8 +44,9 @@ function ProductView() {
                     <div id="name">{product.name}</div>
                     <div id="price">{product.price.toLocaleString()}원</div>
                     <div id="desc">{product.description}</div>
+                    {/* <div id="amount">{product.amount}</div> */}
                     <div className="btn">
-                        <button onClick={() => dispatch(addCart(product))} className='add-cart-btn'>ADD TO BAG</button>
+                        <button onClick={addCartProduct} className='add-cart-btn'>ADD TO BAG</button>
                         <button>BUY IT NOW</button>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './notice.scss';
 import { API_URL } from '../config/constants';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { Tab, Table, TableBody, TableCell, TableRow } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
 
 function NoticeView() {
@@ -22,7 +22,6 @@ function NoticeView() {
             console.log(error);
         })
     }, []);
-
     // 삭제
     const onDelete = () => {
         axios.delete(
