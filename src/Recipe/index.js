@@ -43,42 +43,6 @@ function Recipe() {
                         }
                     </div>
                 </div>
-                {/* <div id="recipe" className="innerCon">
-                    <div id="recipe-list">
-                        <div className="recipe-card">
-                            <div>
-                                <img className="recipe-img" src="img/recipe/recipe01.jpeg" alt="레시피1" />
-                            </div>
-                            <div className="recipe-contents">
-                                <p>리치베리 모닝 에그번</p>
-                            </div>
-                        </div>
-                        <div className="recipe-card">
-                            <div>
-                                <img className="recipe-img" src="img/recipe/recipe02.jpeg" alt="레시피2" />
-                            </div>
-                            <div className="recipe-contents">
-                                <p>카레 리소토</p>
-                            </div>
-                        </div>
-                        <div className="recipe-card">
-                            <div>
-                                <img className="recipe-img" src="img/recipe/recipe03.jpeg" alt="레시피3" />
-                            </div>
-                            <div className="recipe-contents">
-                                <p>튀김 핫도그 번</p>
-                            </div>
-                        </div>
-                        <div className="recipe-card">
-                            <div>
-                                <img className="recipe-img" src="img/recipe/recipe04.jpeg" alt="레시피4" />
-                            </div>
-                            <div className="recipe-contents">
-                                <p>클럽 하우스 샌드위치</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

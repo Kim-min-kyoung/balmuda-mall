@@ -48,7 +48,7 @@ function NoticeView() {
                     </TableRow>
                     <TableRow>
                         <TableCell className="tdTitle">날짜</TableCell>
-                        <TableCell>{notice.createdAt}</TableCell>
+                        <TableCell>{notice.createdAt.substring(0, 10)}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="tdTitle">작성자</TableCell>

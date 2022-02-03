@@ -3,8 +3,7 @@ import MainPage from './main';
 import Header from './include/Header';
 import Footer from './include/Footer';
 import { Route, Routes } from 'react-router-dom';
-import ProductView from './ProductView';
-import ReviewList from './ProductReview/ReviewList';
+import ProductView from './ProductView/ProductView';
 import Store from './ProductView/ProductList';
 import Recipe from './Recipe';
 import Notice from './Notice/index';
@@ -20,11 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/:id/*" element={<ProductView />} />
-        <Route path="/products/:id/review" element={<ReviewList />} />
-        {/* <Route path="/products/:id/detail" element={<ProductDetail />} /> */}
         <Route path="/notice/*" element={<Notice />} />
         <Route path="/product/*" element={<Product />} />
-        {/* <Route path="/notice/:id" element={<NoticeView />} /> */}
         <Route path="/recipes" element={<Recipe />} />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />

@@ -2,7 +2,7 @@
 a {text-decoration: none; color: inherit}
 li {list-style: none;}
 body {
-  font-family: "Open Sans","Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+  font-family: "Pretendard-Regular","Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -11,4 +11,10 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }

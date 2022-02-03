@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 
 function Checkbox(props) {
-    const [ isClicked, setIsClicked ] = useState(true);
+    const [ isClicked, setIsClicked ] = useState(false);
     return (
         <Label isClicked={isClicked}>
             <CheckImg isClicked={isClicked} />

@@ -4,6 +4,7 @@ import './notice.scss';
 import axios from 'axios';
 import { API_URL } from '../config/constants';
 import { Link } from 'react-router-dom';
+// import { AiFillNotification } from 'react-icons/ai';
 
 function Noticelist() {
     const [ notices, setNotices ] = useState([]);
@@ -42,7 +43,7 @@ function Noticelist() {
                                     <TableCell>{notice.id}</TableCell>
                                     <TableCell><Link to={`/notice/${notice.id}`}>{notice.title}</Link></TableCell>
                                     <TableCell>{notice.name}</TableCell>
-                                    <TableCell>{notice.createdAt}</TableCell>
+                                    <TableCell>{notice.createdAt.substring(0, 10)}</TableCell>
                                 </TableRow>
                             )
                         })
@@ -52,9 +53,6 @@ function Noticelist() {
             <div className="innerCon" id="noticeWrite">
                 <Link to="/notice/create"><span>글쓰기</span></Link>
             </div>
-            {/* <div className="notice_pagenav">
-                <a className="thispage">1</a> · <a href="v2_list.php?id=noticebd&amp;page=2" className="navi">2</a> · <a href="v2_list.php?id=noticebd&amp;page=3" className="navi">3</a> · <a href="v2_list.php?id=noticebd&amp;page=4" className="navi">4</a> 
-            </div> */}
         </div>
     );
 }

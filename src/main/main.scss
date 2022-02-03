@@ -137,7 +137,7 @@ header {
 #product {
     height: 100%;
     p {
-        padding: 80px 0 20px 0;
+        padding: 60px 0 30px 0;
         font-size: 35px;
         text-align: center;
     }
@@ -174,19 +174,19 @@ header {
                 width: 100%;
             }
             .product-contents {
-                padding: 20px;
+                padding: 10px;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 span:nth-child(1){
-                    font-size: 22px;
+                    font-size: 20px;
                     font-weight: bold;
                 }
                 #detailGo {
                     color: #333;
                     font-weight: bold;
-                    margin: 30px auto 0 auto;
-                    padding: 5px 5px 5px 10px;
+                    margin: 30px auto 50px auto;
+                    padding: 5px;
                     border-radius: 200px;
                     border: 1px solid #333;
                     font-size: 14px;
@@ -277,9 +277,6 @@ header {
                         font-size: 22px;
                         font-weight: bold;
                         padding-bottom: 10px;
-                    }
-                    #dec {
-                        font-size: 14px;
                     }
                 }
             }

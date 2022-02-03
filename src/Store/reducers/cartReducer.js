@@ -1,18 +1,34 @@
-const INITIAL_STATE = []
+const INITIAL_STATE = {
+    carts: [],
+    total: 0,
+    quantity: 1
+};
 const cartReducer = (state = INITIAL_STATE, action ) => {
     switch(action.type) {
         case "ADD_ITEM":
-            return [
-                ...state, action.payload
-            ]// 불변성을 위해 ...state 을 해줌. 
+            return {
+                ...state,
+                carts: [...state.carts,action.payload],
+                total: state.total + action.payload.price
+            };
         case "DELETE_ITEM":
-            return state.filter((product) => product.id !== action.payload.id)
+            return {
+                ...state,
+                carts: state.carts.filter((product) => product.id !== action.payload.id),
+                total: state.total - action.payload.price
+            }
         case "INCREMENT":
-            return state + action.payload
+            return {
+                ...state,
+                quantity: state.quantity + action.payload.quantity,
+                total: state.total + action.payload.price,
+            }
         case "DECREMENT":
-            return state - action.payload
-        case "SET_DIFF":
-            return [...state, action.diff]
+            return {
+                ...state,
+                quantity: state.quantity - action.payload.quantity,
+                total: state.total - action.payload.price
+            }
         default:
             return state;
     }

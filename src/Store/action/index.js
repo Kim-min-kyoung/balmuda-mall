@@ -22,3 +22,9 @@ export const decrement = (product) => {
         payload: product
     };
 }
+export const setDiff = (diff) => {
+    return {
+        type: "SET_DIFF",
+        payload: diff
+    }
+}

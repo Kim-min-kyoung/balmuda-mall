@@ -23,6 +23,12 @@
                 margin-top: 13px;
             }
         }
+        .line {
+            border-bottom: 4px dashed #ccc;
+            margin-top: 15px;
+            width: 70px;
+            height: 20px;
+        }
     }
     #footer_price {
         margin-bottom: 30px;
@@ -39,14 +45,20 @@
         text-align: right;
         margin-bottom: 50px;
         span {
-            padding: 10px 20px;
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
             text-align: center;
             border-radius: 5px;
             transition: 0.3s;
             &:nth-child(1) {
-                background-color: #333;
+                background-color: #444;
                 color: #fff;
-                margin-right: 10px;
+                margin-right: 20px;
+                &:hover {
+                    background-color: #333;
+                }
             }
             &:nth-child(2)
             {  
@@ -83,10 +95,11 @@
     }
     #count_cell {
         width: 20%;
-        font-weight: bold;
+        // font-weight: bold;
         button {
             width: 25px;
             height: 25px;
+            margin: 0 5px;
             border: none;
             background-color: #ccc;
             color: #333;
@@ -98,8 +111,9 @@
                 color: #fff;
             }
         }
-        input {
-            border: none;
+        span {
+            // border: none;
+            display: inline-block;
             width: 30px;
             height: 30px;
             text-align: center;
@@ -108,19 +122,26 @@
     }
     #price_cell {
         width: 15%;
-        font-weight: bold;
-        font-size: 18px;
+        // font-weight: bold;
     }
     #delte_cell {
         width: 10%;
         #icon {
             font-size: 24px;
+            transition: 0.5s;
+            &:hover {
+                color: black;
+            }
         }
     }
     tr, td {
         text-align: center;
         font-size: 16px;
         color: #5d5d5d;
+    }
+    .point_cell {
+        font-weight: bold;
+        font-size: 18px;
     }
 }
 .cart-empty {

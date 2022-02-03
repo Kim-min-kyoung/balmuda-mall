@@ -95,36 +95,6 @@ function MainPage() {
                                 );
                             })
                         }
-                        {/* <div className="product-card">
-                            <div>
-                                <img className="product-img" src="img/products/BALMUDA The Range (Black).jpeg" alt="토스트기1" />
-                            </div>
-                            <div className="product-contents">
-                                <span>BALMUDA The Range (Black)</span>
-                                <span>전자레인지와 오븐이 하나로</span>
-                                <span id="detailGo">제품 보러가기 <GoChevronRight id="icons"/></span>
-                            </div>
-                        </div>
-                        <div className="product-card">
-                            <div>
-                                <img className="product-img" src="img/products/BALMUDA The Range (Stainless).jpeg" alt="토스트기1" />
-                            </div>
-                            <div className="product-contents">
-                                <span>BALMUDA The Range (Stainless)</span>
-                                <span>전자레인지와 오븐이 하나로</span>
-                                <span id="detailGo">제품 보러가기 <GoChevronRight id="icons"/></span>
-                            </div>
-                        </div>
-                        <div className="product-card">
-                            <div>
-                                <img className="product-img" src="img/products/BALMUDA The Range (White).jpeg" alt="토스트기1" />
-                            </div>
-                            <div className="product-contents">
-                                <span>BALMUDA The Range (White)</span>
-                                <span>전자레인지와 오븐이 하나로</span>
-                                <span id="detailGo">제품 보러가기 <GoChevronRight id="icons"/></span>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <div id="container">
@@ -148,8 +118,9 @@ function MainPage() {
                                 <div className="recipe-contents">
                                     <span>리치베리 모닝 에그번</span>
                                     <span id="dec">
-                                        전문가의 노하우로 만든 프리미엄 서브푸드 브랜드<br/>
-                                        쎄콩데 「콩포트」를 활용한 특별 레시피를 소개합니다.
+                                        전문가의 노하우로 만든 프리미엄 서브푸드<br/>
+                                        브랜드 쎄콩데 「콩포트」를 <br/>
+                                        활용한 특별 레시피를 소개합니다.
                                     </span>
                                 </div>
                             </div>
@@ -161,7 +132,7 @@ function MainPage() {
                                     <span>카레 리소토</span>
                                     <span id="dec">
                                         카레를 잔뜩 만들어 남은 날에는,<br/>
-                                        다음날 카레 리소토를 만들어 드시는 것을 추천합니다.
+                                        다음날 카레 리소토를 추천합니다.
                                     </span>
                                 </div>
                             </div>
