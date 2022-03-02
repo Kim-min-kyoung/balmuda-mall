@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './notice.scss';
+import Spinner from '../Loading/Spinner'
 import { API_URL } from '../config/constants';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
@@ -11,18 +12,19 @@ function NoticeView() {
     const { id } = param;
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get(
-            `${API_URL}/notice/${id}`
-        )
-        .then(function(result){
-            setNotice(result.data.notice);
-            console.log(result.data);
-        })
-        .catch(function(error){
-            console.log(error);
-        })
+        setTimeout(async() => {
+            axios.get(
+                `${API_URL}/notice/${id}`
+            )
+            .then(function(result){
+                setNotice(result.data.notice);
+                console.log(result.data);
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        }, 1000);
     }, []);
-    // 삭제
     const onDelete = () => {
         axios.delete(
             `${API_URL}/notice/${id}`
@@ -36,7 +38,7 @@ function NoticeView() {
         })
     }
     if(notice == null) {
-        return <div>공지게시판 받아오는 중 ing..</div>
+        return <div><Spinner /></div>
     }
     return (
         <div>

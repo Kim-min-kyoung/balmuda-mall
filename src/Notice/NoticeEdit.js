@@ -67,10 +67,6 @@ function NoticeEdit() {
                             <TableCell className="tdTitle">제목</TableCell>
                             <TableCell><input name="title" type="text" value={formData.title} onChange={onChange}/></TableCell>
                         </TableRow>
-                        {/* <TableRow>
-                            <TableCell className="tdTitle">날짜</TableCell>
-                            <TableCell><input name="date" type="date" value={formData.date} onChange={onChange} /></TableCell>
-                        </TableRow> */}
                         <TableRow>
                             <TableCell className="tdTitle">작성자</TableCell>
                             <TableCell><input name="name" type="text" value={formData.name} onChange={onChange}/></TableCell>

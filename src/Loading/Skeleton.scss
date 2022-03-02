@@ -1,0 +1,68 @@
+@keyframes skeleton {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  
+    20% {
+      opacity: 0.25;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+}
+
+.skeleton-card {
+    margin: 0 20px 30px 20px;
+    position: relative;
+    width: 233px;
+    overflow: hidden;
+    transition: 1s;
+    position: relative;
+    .bar {
+        width: 100%;
+        position: absolute;
+        animation-name: skeleton;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        .indicator {
+            width: 0;
+            box-shadow: 0 0 75px 75px white;
+        }
+    }
+    .skeleton-img {
+        height: 233px;
+        width: 233px;
+        background: #f2f2f2;
+        border: 1px solid #f2f2f2;
+        background-image: linear-gradient(#f1f3f5 233px, transparent 0);
+        background-repeat: repeat-y;
+    }
+    .skeleton-contents {
+        width: 100%;
+        height: 94px;
+        text-align: center;
+        p {
+            padding-top: 10px;
+            // font-size: 15px;
+            transition: 0.3s;
+            background: #f2f2f2;
+            width: 100%;
+            height: 20px;
+            &:nth-child(1) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

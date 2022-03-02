@@ -7,10 +7,8 @@ import ProductView from './ProductView/ProductView';
 import Store from './ProductView/ProductList';
 import Recipe from './Recipe';
 import Notice from './Notice/index';
-// import NoticeView from './Notice/NoticeView';
 import About from './About';
 import Product from './Product'
-import Join from './Login/Join';
 
 function App() {
   return (
@@ -24,9 +22,7 @@ function App() {
         <Route path="/recipes" element={<Recipe />} />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />
-        <Route path="/join" element={<Join />} />
       </Routes>
-      {/* <MainPage /> */}
       <Footer />
     </div>
   );

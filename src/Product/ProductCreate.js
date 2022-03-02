@@ -26,7 +26,6 @@ function ProductCreate(props) {
         console.log(name,value);
     }
     // 이미지 경로 상태관리 추가하기
-    // 이미지 경로 상태관리 추가하기
     const onSubmit = (values)=>{
         console.log(formData);
         axios.post(`${API_URL}/products`,{

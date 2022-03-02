@@ -19,7 +19,7 @@ function ProductItem( { product } ) {
             <TableCell id="name_cell">{product.name}</TableCell>
             <TableCell id="count_cell">
                 <button onClick={() => dispatch(decrement(product))} min={1}>-</button>
-                <span>{cart.quantity}</span>
+                <span>{product.quantity}</span>
                 <button onClick={() => dispatch(increment(product))}>+</button>
             </TableCell>
             <TableCell id="price_cell" className="point_cell">{product.price.toLocaleString()}</TableCell>

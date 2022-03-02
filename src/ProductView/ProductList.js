@@ -4,12 +4,10 @@ import CartItem from './ProductItem';
 import '../Store/store.scss';
 import { BsCartCheck, BsCartX, BsCreditCard, BsCheck2Square } from 'react-icons/bs';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
-// import Checkbox from '../Store/Checkbox';
 import { Link } from 'react-router-dom';
 
 function ProductList({ isChecked }) {
     const cart = useSelector(store => store.cartReducer);
-    console.log('여기에요');
     console.log(cart);
     let sum = 0;
     const cartItem = cart.carts.length >= 1 ? cart.carts.map((product, idx) => {
@@ -37,7 +35,6 @@ function ProductList({ isChecked }) {
                     <Table id="storeTable">
                         <TableHead>
                             <TableRow>
-                                {/* <TableCell id="check"><Checkbox isChecked={isChecked}/></TableCell> */}
                                 <TableCell id="img_cell"></TableCell>
                                 <TableCell id="name_cell">제품명</TableCell>
                                 <TableCell id="count_cell">수량</TableCell>

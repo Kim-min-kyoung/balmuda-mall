@@ -4,7 +4,6 @@ import './notice.scss';
 import axios from 'axios';
 import { API_URL } from '../config/constants';
 import { Link } from 'react-router-dom';
-// import { AiFillNotification } from 'react-icons/ai';
 
 function Noticelist() {
     const [ notices, setNotices ] = useState([]);
@@ -31,11 +30,6 @@ function Noticelist() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {/* 받아온 값이 객체라 배열에 넣어주기 위해 .을 붙여 사용함 */}
-                    {/* mysql 입력 후에는 배열로 받는 형태 제거! */}
-                    {/* {notices.about.map(data=>(
-                        <Notice data={data} key={data.id} />
-                    ))} */}
                     {
                         notices.map(notice => {
                             return(

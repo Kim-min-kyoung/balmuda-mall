@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { API_URL } from '../config/constants';
+import WithSkeleton from '../Loading/WithSkeleton';
 
 function All(props) {
     const [ products, setProducts ] = useState([]);
+    const [ isLoading, setIsLoading ] = useState(true);
     const [ group, setGroup ] = useState('product');
     const AllClick = () => {
         setGroup('product');
@@ -14,16 +16,19 @@ function All(props) {
         setGroup(`products_group/${e.target.innerHTML}`);
     }
     useEffect(() => {
-        axios.get(`${API_URL}/${group}`)
-        .then(function(result){
-            const products = result.data.product;
-            console.log(products);
-            setProducts(products);
+        setIsLoading(true);
+        new Promise(result => {
+            setTimeout(()=> {
+                result();
+            }, 500);
+        }).then(() => {
+            axios.get(`${API_URL}/${group}`)
+            .then(result => {
+                setProducts(result.data.product);
+                setTimeout(() => setIsLoading(false), 500);
+            })
         })
-        .catch(function(error){
-            console.log(error);
-        })
-    }, [group])
+    }, [group]);
     return (
         <div className='innerCon'>
             <ul className='nav'>
@@ -33,25 +38,7 @@ function All(props) {
                 <li onClick={liClick}>LIGHTING</li>
             </ul>
             <div id="products">
-                <div id="products-list">
-                        {
-                            products.map(product => {
-                                return(
-                                    <div className="products-card" key={product.id}>
-                                        <Link to={`/products/${product.id}`}>
-                                            <div>
-                                                <img className="product-img" src={product.imageUrl} alt="베스트셀러1" />
-                                            </div>
-                                            <div className="products-contents">
-                                                <p>{product.name}</p>
-                                                <p>{product.price.toLocaleString()}원</p>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                );
-                            })
-                        }
-                </div>
+                <WithSkeleton isLoading={isLoading} data={products} />
             </div>
             <div id="productAdd" className='innerCon'>
                 <span><Link to="/product/create">상품등록</Link></span>

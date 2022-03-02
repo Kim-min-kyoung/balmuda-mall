@@ -14,7 +14,6 @@ import 'swiper/scss/pagination';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 // 탭메뉴
-
 function MainPage() {
     const [ products, setProducts ] = useState([]);
     const [ group, setGroup ] = useState('product');
@@ -71,11 +70,6 @@ function MainPage() {
             </div>
                 <div id="product" className="innerCon">
                     <p>Best <strong>Seller</strong></p>
-                    {/* <ul id="productTop">
-                        <li onClick={liClick}>KITCHEN</li>
-                        <li onClick={liClick}>AIR</li>
-                        <li onClick={liClick}>LIGHTING</li>
-                    </ul> */}
                     <div id="product-list">
                         {
                             products.map(product => {
